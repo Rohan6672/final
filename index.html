@@ -1,100 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieVerse - Discover Movies</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieVerse - Discover Movies</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img id="titleimg" src="https://thumbs.dreamstime.com/b/clapper-board-glow-play-icon-watching-movies-cinema-online-entertainment-media-gift-box-film-strip-speaker-musicnotes-clapper-250472208.jpg">
-                <h1>MovieVerse</h1>
-            </div>
-            <ul class="nav-links">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img id="titleimg" src="https://thumbs.dreamstime.com/b/clapper-board-glow-play-icon-watching-movies-cinema-online-entertainment-media-gift-box-film-strip-speaker-musicnotes-clapper-250472208.jpg">
+        <h1>MovieVerse</h1>
+      </div>
+      <ul class="nav-links">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Discover Your Next Favorite Movie</h2>
-                <p>Explore thousands of movies, create your watchlist, and share your thoughts.</p>
-                <a href="movies.html" class="cta-button">Explore Movies</a>
-            </div>
-        </section>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Discover Your Next Favorite Movie</h2>
+        <p>Explore thousands of movies, create your watchlist, and share your thoughts.</p>
+        <a href="movies.html" class="cta-button">Explore Movies</a>
+      </div>
+    </section>
 
-        <section class="featured-movies">
-            <h2>Featured Movies</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper" id="featured-movies-container">
-                    <!-- Movies will be loaded here -->
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </section>
+    <section class="featured-movies">
+      <h2>Featured Movies</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper" id="featured-movies-container"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
 
-        <section class="trending">
-            <h2>Trending This Week</h2>
-            <div class="movie-grid" id="trending-container">
-                <!-- Movies will be loaded here -->
-            </div>
-        </section>
+    <section class="trending">
+      <h2>Trending This Week</h2>
+      <div class="movie-grid" id="trending-container"></div>
+    </section>
 
-        <section class="stats">
-            <h2>Movie Statistics</h2>
-            <div class="stats-container">
-                <div class="chart-container">
-                    <canvas id="ratings-chart"></canvas>
-                </div>
-                <div class="stats-info">
-                    <h3>Ratings Distribution</h3>
-                    <p>Explore how movies are rated across different genres.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h2>MovieVerse</h2>
-                <p>Discover. Watch. Review.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="movies.html">Movies</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-newsletter">
-                <h3>Stay Updated</h3>
-                <p>Subscribe to our newsletter for the latest updates.</p>
-                <form id="newsletter-form">
-                    <input type="email" placeholder="Your email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
+    <section class="stats">
+      <h2>Movie Statistics</h2>
+      <div class="stats-container">
+        <div class="chart-container">
+          <canvas id="ratings-chart"></canvas>
         </div>
-        <div class="footer-bottom">g
-            <p>&copy; 2025 MovieVerse. All rights reserved.</p>
+        <div class="stats-info">
+          <h3>Ratings Distribution</h3>
+          <p>Explore how movies are rated across different genres.</p>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/home.js"></script>
-</body>   
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>MovieVerse</h2>
+        <p>Discover. Watch. Review.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter for the latest updates.</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 MovieVerse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/home.js"></script>
+</body>
 </html>

@@ -4,14 +4,9 @@
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 const SUPABASE_URL = 'https://djnedeefklvtxzdeolrp.supabase.co'; // Replace with your Supabase URL
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRqbmVkZWVma2x2dHh6ZGVvbHJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2MTczMDYsImV4cCI6MjA2MzE5MzMwNn0.HBfzInSjWLZnii8ALY_MaTVs-i9EHAvQEgJgGhsmfjU'; // Replace with your Supabase key
-const TMDB_API_KEY = 'YOUR_TMDB_API_KEY'; // Replace with your TMDB API key
+const TMDB_API_KEY = '4241c06abf0eb2605b93ff34ba551473'; // Replace with your TMDB API key
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
-const supabaseClient = require('@supabase/supabase-js')
-const supabase = supabaseClient.createClient (SUPABASE_URL, SUPABASE_KEY)
 
-let a = supabase.from('movies').select();
-print(a);
-print("hello");
 
 // API Endpoints
 const API_ENDPOINTS = {
