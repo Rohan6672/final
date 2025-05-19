@@ -675,3 +675,306 @@ footer {
         width: 100%;
     }
 }
+
+
+/* style.css */
+
+/* Global Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #222;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation: slideDown 0.6s ease-out;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover,
+  .nav-links .active a {
+    color: #ff6347;
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to   { transform: translateY(0);       }
+  }
+  
+  /* Hero Section */
+  .about-hero {
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px; /* height of navbar */
+  }
+  .about-hero-content {
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* About Content */
+  .about-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .about-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+  .about-info p {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeInLeft 0.8s ease-out 0.3s forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Team Section */
+  .team-section {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1s forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .team-member {
+    background: #fafafa;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  .team-member:nth-child(1) { animation-delay: 1.2s; }
+  .team-member:nth-child(2) { animation-delay: 1.4s; }
+  .team-member:nth-child(3) { animation-delay: 1.6s; }
+  
+  .member-photo {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    transition: transform 0.3s;
+  }
+  .team-member:hover .member-photo {
+    transform: scale(1.1);
+  }
+  
+  /* Technologies Section */
+  .technologies {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  .tech-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .tech-item {
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+  .tech-item:nth-child(1) { animation-delay: 1.8s; }
+  .tech-item:nth-child(2) { animation-delay: 2.0s; }
+  .tech-item:nth-child(3) { animation-delay: 2.2s; }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Footer */
+  footer {
+    background: #222;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 2s forwards;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-logo h2 {
+    margin-bottom: 0.5rem;
+  }
+  .footer-links ul {
+    list-style: none;
+  }
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover {
+    color: #ff6347;
+  }
+  .footer-newsletter form {
+    display: flex;
+    margin-top: 0.5rem;
+  }
+  .footer-newsletter input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+  }
+  .footer-newsletter button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #ff6347;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .footer-newsletter button:hover {
+    background: #e5533d;
+  }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  /* -----------------------------
+   Simple Animations
+   ----------------------------- */
+
+/* 1) Bounce effect on the Search button */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-5px); }
+  }
+  .search-box button:hover {
+    animation: bounce 0.5s ease;
+  }
+  
+  /* 2) Staggered fade-in-up for movie cards */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .movie-grid .movie-card {
+    opacity: 0; /* start hidden */
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  /* Stagger the delays for the first few cards */
+  .movie-grid .movie-card:nth-child(1) { animation-delay: 0.1s; }
+  .movie-grid .movie-card:nth-child(2) { animation-delay: 0.2s; }
+  .movie-grid .movie-card:nth-child(3) { animation-delay: 0.3s; }
+  .movie-grid .movie-card:nth-child(4) { animation-delay: 0.4s; }
+  .movie-grid .movie-card:nth-child(5) { animation-delay: 0.5s; }
+  /* …add more nth-child rules as needed for additional cards */
