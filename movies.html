@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - MovieVerse</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>MovieVerse</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="movies.html">Movies</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <h2>Find Your Next Movie</h2>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search for movies...">
+                    <button id="search-button">Search</button>
+                </div>
+                <div class="filters">
+                    <select id="genre-filter">
+                        <option value="">All Genres</option>
+                        <!-- Genres will be loaded here -->
+                    </select>
+                    <select id="year-filter">
+                        <option value="">All Years</option>
+                        <!-- Years will be loaded here -->
+                    </select>
+                    <select id="sort-by">
+                        <option value="popularity.desc">Popularity</option>
+                        <option value="vote_average.desc">Rating</option>
+                        <option value="release_date.desc">Release Date</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="movies-results">
+            <h2>Movies</h2>
+            <div class="movie-grid" id="movies-container">
+                <!-- Movies will be loaded here -->
+            </div>
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be loaded here -->
+            </div>
+        </section>
+
+        <section class="movie-details-modal" id="movie-details-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="movie-details-container" id="movie-details-container">
+                    <!-- Movie details will be loaded here -->
+                </div>
+                <div class="movie-ratings">
+                    <h3>Rate This Movie</h3>
+                    <div class="rating-stars" id="rating-stars">
+                        <!-- Rating stars will be loaded here -->
+                    </div>
+                    <button id="favorite-button">Add to Favorites</button>
+                </div>
+                <div class="movie-analytics">
+                    <h3>Rating Analytics</h3>
+                    <canvas id="movie-ratings-chart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>MovieVerse</h2>
+                <p>Discover. Watch. Review.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MovieVerse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="public/js/api.js"></script>
+    <script src="public/js/movies.js"></script>
+</body>
+</html>
